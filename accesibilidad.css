@@ -1,0 +1,542 @@
+@charset "windows-1252";
+/* Estilo de la Universidad de Alicante */
+
+* {
+  color: #003366;
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+html {
+  overflow: scroll;
+}
+
+body {
+  background: #FFFFFF;
+  padding-left: 4%;
+  padding-right: 4%;
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+object, iframe {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.ocultar {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.screen-reader-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+
+/* CABECERA */  
+/* 24/01/2021 */
+#cabecera {
+  margin-bottom: 1.5em;
+}
+
+#cabecera img {
+  border: 0px;
+  vertical-align: middle;
+}
+
+#logo1 {
+  float: left;
+}
+
+#logo2 {
+  float: right;
+}
+
+
+
+/* ENLACES Y MIGAS DE PAN */
+/* Por defecto están ocultos, pero se puede configurar y se almacena la configuración en una cookie */
+#enlaces {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+#enlaces ul {
+  margin: 0;
+  padding: 0;
+}
+
+#enlaces li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#enlaces:focus-within {
+/*
+  position:absolute;
+  left:0px;
+  top:0px;
+  outline-color:transparent;	
+  -webkit-transition: top .1s ease-in;
+  transition: top .1s ease-in;
+*/
+  overflow: visible; width: auto; height: auto;
+}
+
+#migas {
+  font-size: 80%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#migas:focus-within {
+  overflow: visible; width: auto; height: auto;
+}
+
+
+/* BARRA DE MENÚ
+   http://www.dynamicdrive.com/dynamicindex1/hover.htm
+*/
+#menu {
+/*  clear: both;*/
+  overflow:visible; /* 18/7/2015: necesario para Mozilla Firefox */
+  background-color: #003366;
+}
+
+#menu ul {
+  margin: 0;
+  margin-right: 390px;
+  padding: 0;
+  background-color: #003366;
+  border: 6px solid #003366;
+}
+
+#menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+}
+
+#menu a {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #003366;
+  border: 3px solid #003366;
+  color: #FFFFFF;
+  font-size: 80%;
+}
+
+#menu a.seleccionado {
+/*  background-color: #426B94;*/
+  background-color: #FFF;
+  color: #000;
+}
+
+#menu a:hover, #menu a:focus {
+/*  background-color: #426B94;*/
+  color: #003366;
+  background-color: #FFF;
+  -webkit-transition: background-color 0.2s ease-in, text-shadow 0.2s ease-in;
+  transition: background-color 0.2s ease-in, text-shadow 0.2s ease-in;
+}
+
+#menu a:active {
+  border-style: inset;
+}
+
+/* BUSCAR */
+#buscar {
+  margin: 0;
+  padding: 2px;
+  float: right;
+  width: 390px;
+  font-size: 80%;
+  background-color: #003366;
+}
+/*
+#buscar p {
+  margin: 0;
+  padding: 0;
+}
+
+#buscar a {
+  color: #FFFFFF;
+}
+
+#buscar a:hover {
+  background-color: #426B94;
+}
+*/
+
+/* SUBMENÚ */
+#submenu {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 190px;
+  border-right: 2px solid #003366;  
+}
+
+#submenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#submenu ul ul {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+}
+
+#submenu li {
+  margin: 0;
+  margin-bottom: 0.4em;
+  padding: 0;
+  list-style: none;
+}
+
+#submenu a {
+  font-size: 80%;
+}
+
+#submenu a.seleccionado {
+  color: #FFFFFF;
+  background-color: #426B94;
+}
+
+#submenu h2:before {
+  content: "";
+}
+
+
+/* CONTENIDO */
+#contenido {
+  clear: right;
+  margin: 0;
+  padding: 0;
+
+  border-left: 2px solid #003366;
+  margin-left: 190px;
+  padding-left: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, h3, h4, h5 {
+  margin: 0;
+  background-color: #BDCED6;
+}
+
+h2:before {
+  content: "> ";
+}
+
+h3:before {
+  content: ">> ";
+}
+
+h4:before {
+  content: ">>> ";
+}
+
+h5:before {
+  content: ">>>> ";
+}
+
+a, h1 a {
+  color: #000000;
+}
+
+a:hover, h1 a:hover, a:focus, h1 a:focus {
+  background-color: #D8E5EA;
+  -webkit-transition: background-color 0.2s ease-in, text-shadow 0.2s ease-in;
+  transition: background-color 0.2s ease-in, text-shadow 0.2s ease-in;
+}
+
+a:focus, h1 a:focus {
+  outline: 2px solid yellow;
+}
+
+abbr {
+  border-bottom: 1px dotted #000;
+}
+
+pre {
+  font-family: Courier, serif;
+  border: 2px solid #003366;
+  background-color: #F5F5F5;
+  padding: 1em;
+  overflow: auto;
+}
+
+code {
+  font-family: Courier, serif;
+  font-size: 1em;
+}
+
+kbd {
+  font-weight: bold;
+}
+
+/*
+kbd {
+  border-width: 2px 4px 5px 3px;
+  border-style: solid;
+  border-color: #ccc #aaa #888 #bbb;
+
+  white-space: nowrap;
+  color: #000;
+  background: #eee;
+}
+*/
+
+blockquote {
+  border: 2px dotted #003366;
+  background-color: #F5F5F5;
+  padding: 10px;
+}
+
+tt {
+  font-family: Arial;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 20px;
+}
+
+dt + dt {
+  margin-top: 20px;
+}
+
+q {
+  font-style: italic;
+}
+
+.centrado {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.importante {
+  color: red;
+  font-weight: bold;
+}
+
+.importante-borde {
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+  padding: 1em;
+}
+
+.conborde tr, .conborde th, .conborde td {
+  border: 1px solid;
+}
+
+
+/* Usado por las traducciones de WebAIM para representar pulsaciones de teclas */
+.keycap {
+  background-color: #EAE9D7;
+  border-top: #F5F8ED solid 2px;
+  border-left: #eeeeee solid 2px;
+  border-right: #A4A585 solid 2px;
+  border-bottom: #A4A585 solid 2px;
+  color: #000000;
+  padding: 1px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* PIE */
+#pie {
+  clear: both;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#pie ul {
+  margin: 0;
+  padding: 0;
+}
+
+#pie li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#pie img {
+  border: 0px;
+}
+
+/* 2021-01-29 */
+#contenido img {
+  max-width: 100%;
+}
+
+/*** Estilos para traducciones de WebAIM ***/
+.floatleft
+{
+  float: left;
+  margin: 8px 10px 1px 0px;
+}
+
+.floatright
+{
+  float: right;
+  margin: 8px 0px 1px 10px;
+}
+
+.important {
+  margin: 2em 4em 2em 4em;
+  padding: 1em 2em 1em 2em;
+  border: 1px dashed #003366;
+  background-color: #F5F5F5;
+}
+
+/***
+Fluid Width Video
+http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+***/
+.videoWrapperMax {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin-bottom: 30px;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/**** Media queries (14/02/2015) ***/
+@media (max-width: 1250px) {
+  #buscar {
+    margin: 0;
+    padding: 10px;
+    float: none;
+    width: auto;
+    font-size: 100%;
+    background-color: #003366;
+  }
+
+  #menu ul {
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #buscar {
+    margin: 0;
+    padding: 10px;
+    float: none;
+    width: auto;
+    font-size: 80%;
+    background-color: #003366;
+  }
+
+  #migas {
+    font-size: 100%;
+  }
+
+  #menu {
+    line-height: 2em;
+  }
+
+  #menu ul {
+    margin-right: 0;
+  }
+
+  #menu a {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 100%;
+  }
+
+  #submenu {
+    float: none;
+    width: auto;
+    border-right: none;
+  }
+
+  #submenu a {
+    font-size: 100%;
+  }
+
+  #contenido {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .important {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* 24/01/2021 */
+@media (min-width: 600px) and (max-width: 800px) {
+  #cabecera h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #cabecera h1 {
+    text-align: left;
+  }
+}
