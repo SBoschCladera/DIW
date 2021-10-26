@@ -1,0 +1,74 @@
+.cuerpo {
+  width: 440px;
+  height: 395px;
+  background-color: cornsilk;
+  padding: 0px 12px 12px 12px;
+  border: none;
+  font-size: 10px;
+  text-align: center;
+
+}
+
+.titulo {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 12px;
+
+}
+
+.cabecera {
+  display: flex;
+  /* align-items: center; ******* NO SÉ PORQUE NO VA **********
+  text-align: center;*/
+
+}
+
+.diaCabecera {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  height: 20px;
+  margin-left: 2px;
+  margin-bottom: 1px;
+  background-color: aquamarine;
+  border-bottom: 2px solid blue;
+  line-height: 20px;
+}
+
+.semana {
+  display: flex;
+  /* align-items: center;   ******* NO SÉ PORQUE NO VA **********
+  text-align: center;*/
+}
+
+.dia {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  height: 60px;
+  font-size: 23px;
+  background-color: cornsilk;
+  border: 1px solid black;
+  margin-left: 2px;
+  margin-top: 2px;
+  line-height: 60px;
+
+}
+
+.fe {
+  background-color: salmon;
+}
+
+.diaSinBordes {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  height: 60px;
+  font-size: 23px;
+  background-color: cornsilk;
+  border: 1px solid cornsilk;
+  margin-left: 2px;
+  margin-bottom: 2px;
+
+}
