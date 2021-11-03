@@ -19,9 +19,7 @@
 
 .cabecera {
   display: flex;
-  /* align-items: center; ******* NO SÉ PORQUE NO VA **********
-  text-align: center;*/
-
+  
 }
 
 .diaCabecera {

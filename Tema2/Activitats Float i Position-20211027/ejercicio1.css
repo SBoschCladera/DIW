@@ -1,0 +1,28 @@
+.box1 {
+    width: 46%;
+    height: 60px;
+    background-color: lightgray;
+    margin-top: 25px;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-right: none;
+    padding: 25px;
+    font-size: 40px;
+}
+
+.box2 {
+    width: 46%;
+    height: 60px;
+    background-color: lightgray;
+    margin-top: 25px;
+    border: 1px solid gray;
+    border-left: none;
+    padding: 25px;
+    font-size: 40px;
+    text-align: right;
+}
+
+div {
+    width: 100%;
+    float: left;
+}

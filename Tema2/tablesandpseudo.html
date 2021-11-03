@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    overflow-x:auto;
+
+    /*display: inline-block;
+    overflow-x: auto scroll; hidden*/
+}
+td, th {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table tr th {
+background-color: rgb(155, 230, 255);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+tr:nth-child(3) {
+    background-color: rgb(172, 100, 100);
+    color:white;
+}
+td::first-letter {
+    font-weight: bold;
+    font-size: x-large;
+    color:darkgreen;
+}
+tr:hover {
+    background-color: lightgrey;
+}
+
+tr:nth-child(3):hover {
+    background-color: rgb(27, 83, 146);
+}
+td::selection {
+    background-color: rgb(25, 117, 71);
+}
+
+</style>
+</head>
+<body>
+<H1>TABLES AND PSEUDO</H1>
+<hr>
+<div id="myJSTable"></div>
+<!--<table>  CREATE TABLE AND 5 PSEUDOS-->
+</body>
+
+<script>
+    const rownum=10
+    const colnum=25
+    function addTable() {
+    var i,j;
+    var myTableDiv = document.getElementById("myJSTable");
+    var table = document.createElement('TABLE');
+    
+    //we create the tags table and table body
+    var tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+
+    for (i = 0; i < rownum; i++) {
+        var tr = document.createElement('TR');
+        tableBody.appendChild(tr);
+        for (var j = 0; j < colnum; j++) {
+            var td = document.createElement('TD');
+            //debugger
+            td.appendChild(document.createTextNode("Content " + (i+1) + "" + (j+1)));
+            tr.appendChild(td);
+        }
+    }
+    myTableDiv.appendChild(table);
+    }
+addTable();
+</script>
+</html>

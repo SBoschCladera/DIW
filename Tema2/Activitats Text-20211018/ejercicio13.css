@@ -47,9 +47,6 @@ enlaces  de color #CC6600.*/
 #publicidad p a{
     color: #CC6600;
 }
-#publicidad h3 a{
-    color: #CC6600;
-}
 /*  Los  enlaces  contenidos  dentro  de .articulo son  de  color #CC6600 y  todos  los  
 párrafos muestran un margen superior e inferior de 0.3em. 
 */
@@ -74,15 +71,18 @@ font-size: medium;
 #secundario p a{
     color:#003366;
 }
+
+
+
 /*  Añadir las reglas necesarias para que el contenido de #pie se vea como en la imagen
 que se muestra.
 */
-#pie{
-    font-size: 11px;
-    font-weight: bold;
-}#pie .copyright{
-    opacity: 0.3;
-}
+
+
+
+
+
+
 /*-------------------------------------------------*/
 
 ul,

@@ -37,6 +37,6 @@ td {
   background-color: salmon;
 }
 
-.celdaVacia {
+td:empty {
   border: none;
 }

@@ -1,0 +1,105 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    width: 1200px;
+    height: 850px;
+    font-size: 26px;
+    background-color: blanchedalmond;
+    margin: auto;
+    position: absolute;
+    right: 300px;
+}
+
+#m1 {
+    width: 82%;
+    height: 80px;
+    border: 2px solid khaki;
+    text-align: center;
+    background-color: peru;
+    line-height: 50px;
+    margin: auto;
+    position: absolute;
+    right: 9%;
+
+}
+
+#m2 {
+    width: 350px;
+    height: 180px;
+    border: 2px solid darkseagreen;
+    text-align: center;
+    background-color: lightgreen;
+    padding: 5px 15px 15px 15px;
+    margin: auto;
+    position: absolute;
+    top: 49%;
+    right: 34%;
+    z-index: 1;
+
+}
+
+#m3 {
+    width: 350px;
+    height: 180px;
+    border: 2px solid yellow;
+    text-align: left;
+    background-color: lightyellow;
+    padding: 5px 15px 15px 15px;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+
+}
+
+#m4 {
+    width: 350px;
+    height: 180px;
+    border: 2px solid midnightblue;
+    text-align: right;
+    background-color: lightskyblue;
+    padding: 5px 15px 15px 15px;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+#m5 {
+    width: 350px;
+    height: 180px;
+    border: 2px solid palevioletred;
+    text-align: left;
+    background-color: rebeccapurple;
+    padding: 5px 15px 15px 15px;
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
+}
+
+#m6 {
+    width: 350px;
+    height: 180px;
+    border: 2px solid brown;
+    text-align: right;
+    background-color: salmon;
+    padding: 5px 15px 15px 15px;
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+}
+#m2:hover{
+    z-index: 2;
+}
+#m3:hover{
+    z-index: 2;
+}
+#m4:hover{
+    z-index: 2;
+}
+#m5:hover{
+    z-index: 2;
+}
+#m6:hover{
+    z-index: 2;
+}
