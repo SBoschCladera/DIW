@@ -1,0 +1,136 @@
+h1 {
+  margin-left: 380px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+h1:first-child {
+  margin-top: 25px;
+}
+
+.primeraLista,
+.segundaLista,
+.terceraLista,
+.cuartaLista,
+.quintaLista {
+  width: 820px;
+  margin: auto;
+  font-weight: bolder;
+}
+
+.primeraLista {
+  background-color: rgb(171, 219, 241);
+}
+
+.segundaLista {
+  background-color: rgb(242, 238, 243);
+}
+
+.terceraLista {
+  background-color: rgb(230, 239, 241);
+}
+
+.cuartaLista {
+  background-color: rgb(252, 235, 249);
+  border-bottom: 1px solid rgb(177, 142, 177, 0.4);
+}
+
+.quintaLista {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  text-align: center;
+  margin-top: 15px;
+  float: left;
+  border-radius: 9px 9px 0px 0px;
+  margin-right: 3px;
+}
+
+li:first-child {
+  margin-left: 40px;
+}
+
+.primeraLista li {
+  background-color: rgb(203, 225, 235);
+}
+
+.segundaLista li {
+  background-color: rgb(242, 238, 243);
+  border: 1px solid rgb(177, 142, 177, 0.4);
+  border-bottom: none;
+}
+
+.terceraLista li {
+  background-color: rgb(169, 212, 169);
+}
+
+.cuartaLista li {
+  background-color: rgb(252, 235, 249);
+  border: 1px solid rgb(177, 142, 177, 0.4);
+  border-bottom: none;
+}
+
+.quintaLista li {
+  background-color: rgb(151, 11, 11);
+  border-radius: 0px;
+}
+
+li a {
+  width: 60px;
+  height: 6px;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+.primeraLista li a:hover:not(.active) {
+  background-color: yellow;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.segundaLista li a:hover:not(.active) {
+  background-color: yellow;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.terceraLista li a:hover:not(.active) {
+  background-color: yellow;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.cuartaLista li a:hover:not(.active) {
+  background-color: yellow;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.quintaLista li a:hover:not(.active) {
+  background-color: yellow;
+}
+
+.elementoLargo {
+  width: 140px;
+}
+
+.cuartaLista li a {
+  color: rgb(168, 11, 85);
+}
+
+.quintaLista li a {
+  color: white;
+}
+
+.active {
+  background-color: #04aa6d;
+}
