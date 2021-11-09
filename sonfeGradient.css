@@ -1,3 +1,5 @@
+/*Probado con Google Chrome*/
+
 .header {
   width: 1170px;
   height: 150px;
@@ -80,4 +82,77 @@ li::first-letter {
   margin-right: 75px;
   margin-top: 15px;
   font-size: 14px;
+}
+
+@media (max-width: 900px) {
+
+  .header {
+    width: 96%;
+  }
+
+  li {
+    width: 30%;
+    height: 45px;
+  }
+
+  .column.content {
+    width: 65%;
+    margin-left: 60px;
+    margin-right: 40px;
+    position: relative;
+    bottom: 220px;
+    left: 230px;
+  }
+
+  .column.news {
+    width: 92%;
+    height: 160px;
+    position: relative;
+    bottom: 205px;
+    left: 20px;
+    padding-left: 23px;
+  }
+
+  .footer {
+    width: 96%;
+    position: relative;
+    top: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .header {
+    width: 94%;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+
+  li {
+    width: 105%;
+    height: 45px;
+    margin-left: -33px;
+  }
+
+  .column.content {
+    width: 92%;
+    position: relative;
+    top: 10px;
+    margin-left: -205px;
+  }
+
+  .column.news {
+    width: 91%;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    padding-left: 10px;
+  }
+
+  .footer {
+    width: 94%;
+    position: relative;
+    top: 395px;
+    margin-left: 15px;
+  }
 }
