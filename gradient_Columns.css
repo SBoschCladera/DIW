@@ -1,0 +1,47 @@
+.contenedor {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  font-size: 24px;
+}
+
+.header {
+  width: 100%;
+  line-height: 128px;
+  background-color: blue;
+}
+
+.menu {
+  display: flex;
+}
+
+.caja {
+  float: left;
+  width: 25%;
+  line-height: 60px;
+  background-color: red;
+}
+
+.cuerpo {
+  display: flex;
+}
+
+.columna {
+  float: left;
+  text-align: justify;
+  padding: 1.5%;
+  background-color: yellow;
+}
+
+.footer {
+  width: 100%;
+  line-height: 110px;
+  text-align: left;
+  background-color: violet;
+  padding-left: 2%;
+}
+
+.negrita {
+  font-weight: bolder;
+  font-size: 30px;
+}
