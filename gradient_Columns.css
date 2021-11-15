@@ -1,4 +1,5 @@
 .contenedor {
+  /* Ancho total de la página. */
   width: 100%;
   text-align: center;
   background-color: white;
@@ -7,41 +8,189 @@
 
 .header {
   width: 100%;
+  /* Centramos el texto verticalmente. */
   line-height: 128px;
-  background-color: blue;
+  /* Efecto degradado (gradiente) al color desde la parte inferior derecha. */
+  background-image: linear-gradient(to bottom right, GREY, LIGHTBLUE, blue);
+  /* Redondeo de los bordes para conseguir el efecto deseado. */
+  border-radius: 10%;
+  font-size: xx-large;
+  font-weight: bolder;
 }
 
+
 .menu {
+  /* Usamos flex-box para una mayor comodidad para trabajar con el ancho de los div. "caja" */
   display: flex;
+  background-color: black;
+  /* Contador para la barra de navegación. Sin esta instrucción nos repite el número. */
+  counter-reset: section;
+  text-align: center;
 }
 
 .caja {
   float: left;
   width: 25%;
+  /* Centramos el texto verticalmente. */
   line-height: 60px;
-  background-color: red;
+  color: white;
+}
+
+.caja:before {
+  /* Sin esta instrucción nos repite el número inicial. */
+  counter-increment: section;
+  /* Añadimos un espacio entre el contador y el texto de la "caja". */
+  content: counter(section) " ";
 }
 
 .cuerpo {
+  /* Usamos flex-box para una mayor comodidad para trabajar con el ancho de los div. "columna" */
   display: flex;
+  /*flex-wrap: wrap;*/
 }
 
 .columna {
+  width: 25%;
+  /* Hacemos que cada columna se coloque a la izquierda de la anterior. */
   float: left;
   text-align: justify;
   padding: 1.5%;
-  background-color: yellow;
+  /* Configuración de las propiedades para insertar imagen de Yin-yang como background. */
+  background-image: url(Imatges/ying_yang.png);
+  background-size: 18%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position-x: 3%;
+  background-position-y: 5%;
 }
 
 .footer {
-  width: 100%;
+  width: 98%;
+  /* Centramos el texto verticalmente. */
   line-height: 110px;
+  /* Alineamos el texto a la izquierda. */
   text-align: left;
-  background-color: violet;
+  font-weight: bolder;
+  /* Efecto degradado (gradiente) al color desde la parte inferior derecha. */
+  background-image: linear-gradient(to bottom right, gray 40%, LIGHTBLUE, blue);
   padding-left: 2%;
+  /* Redondeo del borde inferior izquierdo para conseguir el efecto deseado. */
+  border-bottom-left-radius: 35%;
+  /* Redondeo del borde superior derecho para conseguir el efecto deseado. */
+  border-top-right-radius: 29%;
 }
 
-.negrita {
+h2 {
   font-weight: bolder;
   font-size: 30px;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 11%;
+}
+
+/* Configuración por si usáramos el icono de Fontawesome, eliminando de "columna" el background-image
+i {
+  margin-top: -20px;
+  /* Colocamos el icono en el lugar sugerido. 
+  font-size: 90px;
+  /* Con el tamaño adecuado. 
+ float: left;
+  /* Flotando a la izquierda de h2. 
+}
+*/
+
+/* Cambiamos las propiedades del div "caja" al situarnos encima de él con el ratón */
+.caja:hover {
+  background-color: lightgray;
+  color: black;
+  font-weight: bolder;
+}
+
+/* RESPONSIVENESS */
+
+/* Adaptamos el cambio de ancho a 1200px */
+@media (max-width: 1200px) {
+
+  .cuerpo {
+    width: 1150px;
+    /* Cambiamos el display para manejar el ancho de las columnas en relación al nuevo width. */
+    display: inline-block;
+  }
+
+  .columna {
+    width: 540px;
+    /* Reducimos para adaptar el tamaño del background. */
+    background-size: 14%;
+  }
+
+  h2 {
+    /* Recolocamos el h2 en relación al logo. */
+    margin-top: 5%;
+    margin-bottom: 8%;
+  }
+}
+
+/* Adaptamos el cambio de ancho a 800px */
+@media (max-width: 800px) {
+
+  .menu {
+    /* Cambiamos el display para manejar el ancho de las "cajas" en relación al nuevo width. */
+    width: 750px;
+    display: inline-block;
+  }
+
+  .caja {
+    float: left;
+    /* Reducimos para adaptar las "cajas" al nuevo ancho. */
+    width: 375px;
+    /* Separamos la primera fila de "cajas" de la segunda (por estética). */
+    border-bottom: 1px solid white;
+  }
+
+  .columna {
+    width: 350px;
+    /* Reducimos para adaptar el tamaño del background. */
+    background-size: 14%;
+  }
+
+  h2 {
+    /* Recolocamos el h2 en relación al logo. */
+    margin-top: 5%;
+    margin-bottom: 9%;
+  }
+}
+
+/* Adaptamos el cambio de ancho a 580px */
+@media (max-width: 580px) {
+
+  .menu {
+    width: 530px;
+    /* Cambiamos el display para manejar el ancho de las "cajas" en relación al nuevo width. */
+    width: 530px;
+    display: inline-block;
+  }
+
+  .caja {
+    float: left;
+    /* Reducimos para adaptar las "cajas" al nuevo ancho. */
+    width: 530px;
+    /* Separamos cada "caja" de la siguiente (por estética). */
+    border-bottom: 1px solid white;
+  }
+
+  .cuerpo {
+    width: 530px;
+    /* Cambiamos el display para manejar el ancho de la columna en relación al nuevo width. */
+    display: inline-block;
+  }
+
+  .columna {
+    width: 510px;
+    /* Reducimos para adaptar el tamaño del background. */
+    background-size: 12%;
+  }
+  h2 {
+    /* Recolocamos el h2 en relación al logo. */
+       margin-bottom: 6%;
+  }
 }
