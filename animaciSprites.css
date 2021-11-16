@@ -1,0 +1,15 @@
+.moviment {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    object-position: 0% 0%;
+    background: url("Sprites/run.png");
+    animation: mymove 0.7s steps(6) infinite;
+}
+
+@keyframes mymove {
+    100% {
+        background-position: 1536px;   
+    }
+
+}
