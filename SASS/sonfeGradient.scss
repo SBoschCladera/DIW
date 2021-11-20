@@ -1,0 +1,199 @@
+$width: 97%; // Variable
+$height: 18%; // Variable
+$margin-top: 10px; // Variable
+$font-size: 0px; // Variable
+
+// Function que divide el ancho del Width según el parámetro introducido
+@function myWidth ($num) {
+  @return $width / $num;
+}
+
+// Function que divide el alto del Height según el parámetro introducido
+@function myHeight ($num) {
+  @return $height / $num;
+}
+
+// Mixin con el color de lafuente y un text-indent
+@mixin colorEspacio {
+  color: white;
+  text-indent: 18px;
+}
+
+// Mixin con float y margin-top
+@mixin FloatAndMargin {
+  float: right;
+  margin-top: 2px;
+}
+
+//*************************************** Styles *************************************/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  width: $width; // Uso de la variable "$width"
+  height: $height; // Uso de la variable "$height"
+  background-image: linear-gradient(green, lightgreen);
+  margin-left: 25px;
+  padding-top: 20px;
+  @include colorEspacio; // Uso del mixin "colorEspacio"
+}
+
+.logo {
+  margin-right: 2%;
+  @include FloatAndMargin; // Uso del mixin "FloatAndMargin"
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: myWidth(3.3); // Uso de la función "myWidth"
+  height: myHeight(3); // Uso de la función "myHeight"
+  background-color: rgb(9, 49, 9);
+  margin-top: -2px + $margin-top; // Uso de la variable $margin-top
+  margin-left: -20px;
+  line-height: 50px;
+  font-size: 16px + $font-size; // Uso de la variable $font-size
+  @include colorEspacio; // Uso del mixin "colorEspacio"
+
+  &:hover {
+    // Uso de una Pseudo-Clase
+    background-color: rgb(16, 131, 16);
+  }
+}
+
+li::first-letter {
+  // Uso de un Pseudo-Elemento
+  color: yellow;
+  font-size: 26px + $font-size;
+}
+
+.column.content {
+  width: 625px;
+  height: 240px;
+  margin-left: 40px;
+  position: relative;
+  bottom: 190px;
+  left: 560px;
+}
+
+.column.content h1 {
+  font-size: 27px + $font-size; // Uso de variable "$font-size"
+}
+
+.clearfix {
+  position: relative;
+  margin-left: 5px;
+}
+
+.column.news {
+  width: 310px; // Uso de la función "myWidth"
+  height: 185px; // Uso de variable "$height"
+  border: 3px solid green;
+  margin-bottom: 50px;
+  margin-top: -2px + $margin-top; // Uso de variable "$margin-top"
+  padding: 5px 5px 5px 3px;
+  //display: inline-block;
+  position: relative;
+  bottom: 455px;
+  right: -80%;
+}
+
+.footer {
+  width: $width; // Uso de variable "$width"
+  height: $height / 1.5; // Uso de variable "$Height"
+  background-image: radial-gradient(darkgreen 3%, green 15%, yellowgreen 60%);
+  text-indent: 20px;
+  margin-top: -470px + $margin-top; // Uso de variable "$margin-top"
+  margin-left: 25px;
+  padding-top: 18px;
+}
+
+.copyLeft {
+  margin-right: 75px;
+  font-size: 14px + + $font-size; // Uso de variable "$font-size"
+  @include FloatAndMargin; // Uso del mixin "FloatAndMargin"
+}
+
+// Uso de media directive
+@media screen and (max-width: 1200px) {
+
+  .header {
+    width: 96%;
+  }
+
+  li {
+    width: myWidth(3.3); // Uso de la función "myWidth"
+    height: myHeight(3); // Uso de la función "myHeight"
+  }
+
+  .column.content {
+    width: 65%;
+    margin-left: 60px;
+    margin-right: 40px;
+    position: relative;
+    bottom: 190px;
+    left: 330px;
+  }
+
+  .column.news {
+    width: 96%;
+    height: 160px;
+    position: relative;
+    bottom: 240px;
+    left: 20px;
+    padding-left: 23px;
+  }
+
+  .footer {
+    width: 96%;
+    position: relative;
+    top: 200px;
+  }
+}
+
+// Uso de media directive
+@media (max-width: 600px) {
+
+  .header {
+    width: 94%;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+
+  li {
+    width: 101.5%;
+    height: myHeight(3); // Uso de la función "myHeight"
+    margin-left: -33px;
+  }
+
+  .column.content {
+    width: 92%;
+    position: relative;
+    top: 10px;
+    margin-left: -315px;
+  }
+
+  .column.news {
+    width: 94.5%;
+    position: relative;
+    top: -40px;
+    left: 10px;
+    padding-left: 10px;
+  }
+
+  .footer {
+    width: 94%;
+    position: relative;
+    top: 395px;
+    margin-left: 15px;
+  }
+}
